@@ -7,8 +7,43 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+  
 </head>
 <body>
   <app-root></app-root>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+  $(function(){
+    $(".contact-2").addClass("animated shake");
+    $(".contact").addClass("animated shake");
+    $(".header-info").addClass("animated fadeInDown");
+   
+    $(window).on("scroll", function(){
+    
+     let $item1=$(".partners").offset();
+     let $item2=$("footer").offset(); 
+    
+     if($(this).scrollTop() > $item1.top - 400){
+       $(".brands").addClass("animated fadeInDown");
+     }else{
+       $(".brands").removeClass("animated fadeInDown");
+     }
+     if($(this).scrollTop() > $item2.top - 800){
+       $("footer ul:last-of-type").addClass("animated fadeInUp");
+     }else{
+       $("footer ul:last-of-type").removeClass("animated fadeInUp");
+     }
+     
+
+   });
+
+  });
+  </script>
 </body>
 </html>
